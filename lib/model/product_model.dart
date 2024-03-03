@@ -10,7 +10,7 @@ class ProductListModel {
     if (json['products'] != null) {
       products = <Products>[];
       json['products'].forEach((v) {
-        products!.add(new Products.fromJson(v));
+        products!.add( Products.fromJson(v));
       });
     }
     total = json['total'];
@@ -19,7 +19,7 @@ class ProductListModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data =  Map<String, dynamic>();
     if (this.products != null) {
       data['products'] = this.products!.map((v) => v.toJson()).toList();
     }
@@ -71,7 +71,7 @@ class Products {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data =  Map<String, dynamic>();
     data['id'] = this.id;
     data['title'] = this.title;
     data['description'] = this.description;
